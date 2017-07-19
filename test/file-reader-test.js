@@ -20,7 +20,7 @@ describe('file reader', () => {
         console.log(typeof data);
         expect(data).to.be.a('string');
         done();
-      })
-    })
-  })
+      });
+    });
+  });
 });
