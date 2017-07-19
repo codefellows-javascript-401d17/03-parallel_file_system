@@ -9,12 +9,13 @@ const fileReader = module.exports = function(path, callback) {
     fs.readFile(`${path}/${fileName}`, function(err, asset) {
 
       if(err) return callback(err);
-      asset = new Buffer(Array.prototype.slice.call(asset, 0, 8));
+      asset = Array.prototype.slice.call(asset, 0, 8);
       console.log(asset);
       callback(null, asset);
 
       fileIndex += 1;
-      if(fileIndex < folder.length) asyncWrapper(folder, callback, fileIndex);
+      if(fileIndex < folder.length) return asyncWrapper(folder, callback, fileIndex);
+      return;
     });
   }
 
