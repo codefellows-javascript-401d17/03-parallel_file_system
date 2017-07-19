@@ -1,10 +1,12 @@
 'use strict';
 
-const readFiles = require('../lib/file-reader.js');
+const readFiles = require('./lib/file-reader.js');
 const paths = [
-  `${__dirname}/assests/one.txt`,
-  `${__dirname}/assests/two.txt`,
-  `${__dirname}/assests/three.txt`
+  `${__dirname}/assets/one.txt`,
+  `${__dirname}/assets/two.txt`,
+  `${__dirname}/assets/three.txt`
 ];
 
-readFiles(paths);
+readFiles(paths, function(err, data) {
+  console.log('my data:', data);
+});
