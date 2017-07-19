@@ -12,26 +12,23 @@ describe('File Reader Module', function() {
       });
     });
   });
-
   describe('correct file path', function() {
-    it('should return the one.txt file', function(done) {
+    it('should return the .txt files', function(done) {
       fileReader(`${__dirname}/../assets/one.txt`, function(err, assets) {
         expect(err).to.equal(null);
         expect(assets).to.be.a('string');
-        it('should return the two.txt file', function(done) {
-          fileReader(`${__dirname}/../assets/two.txt`, function(err, assets) {
+
+        fileReader(`${__dirname}/../assets/two.txt`, function(err, assets) {
+          expect(err).to.equal(null);
+          expect(assets).to.be.a('string');
+
+          fileReader(`${__dirname}/../assets/three.txt`, function(err, assets) {
             expect(err).to.equal(null);
             expect(assets).to.be.a('string');
-            it('should return the three.txt file', function(done) {
-              fileReader(`${__dirname}/../assets/three.txt`, function(err, assets) {
-                expect(err).to.equal(null);
-                expect(assets).to.be.a('string');
-              });
-            });
+            done();
           });
         });
       });
-      done();
     });
   });
 });
