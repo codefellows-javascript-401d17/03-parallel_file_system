@@ -14,22 +14,16 @@ describe('File Reader Module', function() {
   });
 
   describe('with a proper file path', function() {
-    it('should return content of one.txt', function(done) {
+    it('should return content from txt files', function(done) {
       fileReader(`${__dirname}/../assets/one.txt`, function(err, data) {
         expect(err).to.equal(null);
         expect(data).to.be.a('string');
-        done();
-      });
 
-      it('should return content of two.txt', function(done) {
         fileReader(`${__dirname}/../assets/two.txt`, function(err, data) {
           expect(err).to.equal(null);
           expect(data).to.be.a('string');
-          done();
-        });
 
-        it('should return content of three.txt', function(done) {
-          fileReader(`${__dirname}/../assets/three.txt`, function(err, data) {
+          fileReader(`${__dirname}/../assets/two.txt`, function(err, data) {
             expect(err).to.equal(null);
             expect(data).to.be.a('string');
             done();
