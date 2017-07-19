@@ -15,17 +15,17 @@ describe('File Reader Module', function(){
   describe('with a proper file path', function() {
     it('should return the content of the data', function(done) {
       fileReader(`${__dirname}/../assets/one.txt`, function(err, asset) {
-        console.log('1');
         expect(err).to.equal(null);
         expect(asset).to.be.a('string');
+        expect(asset.length).to.equal(16);
         fileReader(`${__dirname}/../assets/two.txt`, function(err, asset) {
-          console.log('2');
           expect(err).to.equal(null);
           expect(asset).to.be.a('string');
+          expect(asset.length).to.equal(16);
           fileReader(`${__dirname}/../assets/three.txt`, function(err, asset) {
-            console.log('3');
             expect(err).to.equal(null);
             expect(asset).to.be.a('string');
+            expect(asset.length).to.equal(16);
             done();
           });
         });
