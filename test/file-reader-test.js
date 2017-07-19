@@ -33,9 +33,3 @@ describe('File Reader Module', function() {
     });
   });
 });
-//   describe('with the proper order', function() {
-//     it('should return the content in the proper order', function(done) {
-//
-//     });
-//   });
-// });
