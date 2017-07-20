@@ -9,7 +9,7 @@
   "scripts": {
     "start": "index.js",
     "test": "mocha",
-    "lint": "eslintrc ."
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
