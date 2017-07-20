@@ -7,3 +7,4 @@ Lab-James Lab-02 Documentation
 Tests
 *../test/file-reader-test.js tests the fileReader module
 *../test/index-test.js tests the orderHexBytes functions
+done() tells mocha that the asynchronous test has finished.
