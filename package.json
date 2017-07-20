@@ -1,0 +1,27 @@
+{
+  "name": "03-parallel_file_system",
+  "version": "1.0.0",
+  "description": "![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 04: Parallel File Processing ===",
+  "main": "index.js",
+  "directories": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loganabsher/03-parallel_file_system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loganabsher/03-parallel_file_system/issues"
+  },
+  "homepage": "https://github.com/loganabsher/03-parallel_file_system#readme"
+}
