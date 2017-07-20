@@ -19,7 +19,7 @@ describe('File Reader', function(){
         `${__dirname}/../assets/two.txt`,
         `${__dirname}/../assets/three.txt`
       ];
-      fileReader(files, function(err, data){
+      fileReader(files, function(err, data) {
         expect(err).to.equal(null);
         expect(data).to.be.an('array');
         expect(data).to.deep.equal([ '66696c65206f6e65', '7365636f6e642066', '6e6f626f64792063' ]);
