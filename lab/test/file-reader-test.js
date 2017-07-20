@@ -3,6 +3,8 @@
 const fileReader = require('../lib/file-reader.js');
 const expect = require('chai').expect;
 
+//Conatains the first 8 bytes from files one, two, and three in order
+let fileBytes = ['5468697320697320', '49207265616c6c79', '4261636f6e206772'];
 
 describe('File Reader Module', () => {
   describe('With improper file path', () => {
@@ -15,11 +17,9 @@ describe('File Reader Module', () => {
   });
 
   describe('With proper file path', () => {
-    it('Should throw console log the first 8 items in the buffer', (done) => {
+    it('Should console log files in order', (done) => {
       fileReader(`${__dirname}/../data`, (err, asset) => {
-        expect(asset[0]).to.equal('5468697320697320');
-        expect(asset[1]).to.equal('49207265616c6c79');
-        expect(asset[2]).to.equal('4261636f6e206772');
+        asset.forEach((buff, ind) => expect(buff).to.equal(fileBytes[ind]));
         done();
       });
     });
